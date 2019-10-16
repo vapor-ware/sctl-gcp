@@ -11,7 +11,7 @@ variable "key" {
 
 variable "owners" {
   type        = list(string)
-  description = "List of comma-separated of super-users for each key."
+  description = "List of key-custodians / super-users"
   default     = []
 }
 
@@ -30,6 +30,6 @@ variable "decrypters" {
 # cf https://cloud.google.com/kms/docs/rotating-keys
 variable "key_rotation_period" {
   description = "How often to rotate the key."
-  type    = string
-  default = "100000s"
+  type        = string
+  default     = "2592000s"
 }
