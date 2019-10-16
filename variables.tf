@@ -1,20 +1,12 @@
-
-
-# cf https://cloud.google.com/kms/docs/locations
-variable "location" {
-  type        = string
-  description = "Location for the keyring."
-}
-
 variable "keyring" {
   type        = string
-  description = "Keyring name."
+  description = "Self link to the GCP KMS Keyring"
 }
 
-variable "keys" {
-  type        = list(string)
-  description = "Key names."
-  default     = []
+variable "key" {
+  type        = string
+  description = "Key name"
+  default     = ""
 }
 
 variable "owners" {
