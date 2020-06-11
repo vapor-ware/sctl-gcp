@@ -33,3 +33,8 @@ variable "key_rotation_period" {
   type        = string
   default     = "2592000s"
 }
+
+output "key_uri" {
+  description = "GCP KMS Key Uri"
+  value       = google_kms_crypto_key.key.self_link
+}
