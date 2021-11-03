@@ -36,5 +36,5 @@ variable "key_rotation_period" {
 
 output "key_uri" {
   description = "GCP KMS Key Uri"
-  value       = google_kms_crypto_key.key.self_link
+  value       = google_kms_crypto_key.key.id
 }
