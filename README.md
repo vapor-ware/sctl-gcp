@@ -42,7 +42,7 @@ resource "google_kms_key_ring" "sctl" {
 module "cloud-ops-operational-key" {
   source = "github.com/vapor-ware/sctl-gcp"
 
-  keyring = google_kms_key_ring.sctl.self_link
+  keyring = google_kms_key_ring.sctl.id
   key = "infra-secrets"
   owners = [
     "admin@example.com",
